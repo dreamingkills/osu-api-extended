@@ -2,11 +2,8 @@ import fs from "fs";
 
 declare const Buffer: any;
 
-const lzma = require('lzma-native');
-const osr = require('node-osr');
-
 const format = (data: any, map: any, score: any, id: any, mods: any, file: string): string => {
-  const decode = Buffer.from(data.content, data.encoding);
+  /*const decode = Buffer.from(data.content, data.encoding);
   const replay = new osr.Replay();
 
   replay.replay_data = lzma.decompress(decode);
@@ -27,7 +24,8 @@ const format = (data: any, map: any, score: any, id: any, mods: any, file: strin
 
   const replayFile = replay.serializeSync();
   fs.writeFileSync(file, replayFile, data.encoding);
-
+  */
+  
   return file;
 };
 
